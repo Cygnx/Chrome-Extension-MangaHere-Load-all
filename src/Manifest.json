@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	
+	"name": "Mangahere Page Loader",
+	"version": "1.0",
+	"description": "auto loads chapters from mangahere into one page",
+	
+	"browser_action": {
+		"default_icon": "icon19.png"
+	},
+	
+	"background": {
+		"scripts": ["event.js"],
+		 "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.mangahere.co/manga/*/*"],
+      "js": ["jquery-2.1.3.min.js", "inject.js"]
+    }
+  ],
+  "permissions": ["http://www.mangahere.co/manga/*/*"]
+}
