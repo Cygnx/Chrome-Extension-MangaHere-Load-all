@@ -6,6 +6,5 @@ function loadChapter () {
 });
 }
 
-// When the browser action is clicked, call the
-// getBgColors function.
+
 chrome.browserAction.onClicked.addListener(loadChapter);
